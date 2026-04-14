@@ -1,4 +1,4 @@
-# ✈️ **AEROBOOK**
+# ✈️ **SkyTravel**
 
 ### *Smart Flight Booking Platform*
 
