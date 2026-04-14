@@ -1,88 +1,158 @@
-<h1 align="center">✈️ AEROBOOK</h1>
+# ✈️ **AEROBOOK**
 
-AeroBook is a modern, high-performance web application designed for searching, booking, and managing flight tickets.
+### *Smart Flight Booking Platform*
 
+---
 
+## 🚀 Overview
 
+**AeroBook** is a modern, high-performance web application built for seamless **flight search**, **booking**, and **management**.
+Designed with scalability and user experience in mind, it delivers a smooth and intuitive journey from search to checkout.
 
-Project Description
+---
 
-Flight Booking Web App is a web application for searching, booking, and purchasing flight tickets.
+## 🌍 What You Can Do
 
-Users can:
+✨ **Search Flights**
+Find flights by **destination**, **date**, and preferences
 
-search for flights by destination and date
-view available flight options
-select seats on a plane
-create bookings
-simulate payment
-manage their bookings in a personal account
+🧭 **Explore Options**
+Browse available flights with detailed information
 
+💺 **Select Seats**
+Interactive seat map with real-time availability
 
-The project is divided into:
+🧾 **Book Tickets**
+Create and manage bookings effortlessly
 
-Frontend (Angular) — client-side application
-Backend (Django + DRF + JWT) — server-side application
+💳 **Simulate Payment**
+Experience a mock payment flow
 
+👤 **Manage Profile**
+Track bookings and view personal data
 
-👥 Team Members
-Frontend Dev: Atamuratov Nursultan 
-Backend Dev: Orynbasar Ahmedi
-DataBase Dev: Almas
+---
 
+## 🧩 Architecture
 
-Tech Stack
+The project is split into two main parts:
 
-Frontend:
-Angular
-TypeScript
-SCSS
-RxJS
-Angular Router
-Angular HttpClient
+### 🎨 Frontend
 
-Backend:
-Django
-Django REST Framework
-JWT Authentication
+> Built with **Angular** — fast, reactive, and scalable
 
-DataBase: 
-PostgreSql
+### ⚙️ Backend
 
+> Powered by **Django + DRF + JWT** — secure and robust
 
-📁 Project Structure
+---
 
-```src/
-    ├── app/
-    │   ├── core/               # services, guards, interceptors
-    │   ├── shared/             # reusable components
-    │   ├── features/           # modules (auth, flights, booking, profile)
-    │   ├── layouts/            # layout components
-    │   └── app-routing.module.ts```
+## 👥 Team
 
+| Role             | Name                 |
+| ---------------- | -------------------- |
+| 🎨 Frontend Dev  | Atamuratov Nursultan |
+| ⚙️ Backend Dev   | Orynbasar Ahmedi     |
+| 🗄️ Database Dev | Almas                |
 
-🔐 Features
-🔑 Authentication
-Registration
-Login
-JWT authentication
-Get current user profile
-✈️ Flight Search
-Search flights
-Filter by date and cities
-Display results
-💺 Seat Selection
-Interactive seat map
-Select available seats
-Show occupied/free seats
-🧾 Booking
-Create booking
-Choose seats
-💳 Payment (Mock)
-Simulated payment
-Change booking status
-👤 Profile
-User information
-Booking history
+---
 
+## 🛠️ Tech Stack
 
+### Frontend
+
+* ⚡ Angular
+* 🟦 TypeScript
+* 🎨 SCSS
+* 🔄 RxJS
+* 🧭 Angular Router
+* 🌐 HttpClient
+
+### Backend
+
+* 🐍 Django
+* 🔗 Django REST Framework
+* 🔐 JWT Authentication
+
+### Database
+
+* 🐘 PostgreSQL
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+ ├── app/
+ │   ├── core/        # services, guards, interceptors
+ │   ├── shared/      # reusable components
+ │   ├── features/    # auth, flights, booking, profile
+ │   ├── layouts/     # layout components
+ │   └── app-routing.module.ts
+```
+
+---
+
+## 🔐 Core Features
+
+### 🔑 Authentication
+
+* Registration & Login
+* JWT-based authentication
+* Get current user profile
+
+### ✈️ Flight Search
+
+* Search by city & date
+* Filter and explore results
+
+### 💺 Seat Selection
+
+* Interactive seat map
+* Real-time availability
+
+### 🧾 Booking System
+
+* Create bookings
+* Select seats
+
+### 💳 Payment (Mock)
+
+* Simulated payment flow
+* Booking status updates
+
+### 👤 User Profile
+
+* Personal info
+* Booking history
+
+---
+
+## 💡 Highlights
+
+* ⚡ **Fast & Responsive UI**
+* 🔐 **Secure Authentication (JWT)**
+* 🧩 **Modular Architecture**
+* 📱 **Scalable Design**
+* 🎯 **User-Centric Experience**
+
+---
+
+## 📌 Future Improvements
+
+* 🔍 Advanced filters (price, airlines, duration)
+* 🌐 Real payment integration
+* 📊 Admin dashboard
+* 📱 Mobile optimization
+
+---
+
+## 🛫 Final Note
+
+> **AeroBook** is more than just a booking app —
+> it's a complete **flight experience platform** built for speed, simplicity, and scalability.
+
+---
+
+⭐ *Feel free to contribute, improve, and take this project to the next level!*
