@@ -7,7 +7,7 @@ import {
   Booking, CreateBookingRequest,
   PaymentRequest, PaymentResponse, CancelBookingResponse
 } from '../models/booking.model';
-import { BookingStateService } from './booking-state';
+// import { BookingStateService } from './booking-state';
 
 const MOCK_BOOKINGS: Booking[] = [
   {
