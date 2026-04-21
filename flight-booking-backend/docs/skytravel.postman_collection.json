@@ -1,0 +1,461 @@
+{
+  "info": {
+    "_postman_id": "95511ead-37f5-42f1-ab3e-6f7e18fcf33e",
+    "name": "skytravel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48047606",
+    "_collection_link": "https://go.postman.co/collection/48047606-95511ead-37f5-42f1-ab3e-6f7e18fcf33e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Регистрация пользователя",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"testuser@example.com\",\n    \"password\": \"securepass123\",\n    \"password_confirm\": \"securepass123\",\n    \"first_name\": \"Тест\",\n    \"last_name\": \"Пользователь\",\n    \"phone\": \"+7777123456\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/auth/register/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "register",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Вход в систему",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"testuser@example.com\",\n    \"password\": \"securepass123\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/auth/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Получение профиля",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2ODA0MTgzLCJpYXQiOjE3NzY3MTc3ODMsImp0aSI6IjE5YmZjYWE3OWE1YTQ2OGE5MmJhNTljMDAzZjFiZGQzIiwidXNlcl9pZCI6IjgiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwiZmlyc3RfbmFtZSI6Ilx1MDQyMlx1MDQzNVx1MDQ0MVx1MDQ0MiIsImxhc3RfbmFtZSI6Ilx1MDQxZlx1MDQzZVx1MDQzYlx1MDQ0Y1x1MDQzN1x1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0Mlx1MDQzNVx1MDQzYlx1MDQ0YyJ9.iRSmIKVhElOxP9Ls2rPZ-R56ceL4L0h6tO5Hy3s6Hok",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/auth/me/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "me",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Получение аэропортов",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2ODAxNTc5LCJpYXQiOjE3NzY3MTUxNzksImp0aSI6Ijg5NjRhOWY1NzUxODRlNGRiZWIzMzg3ZmYwNGQxN2I0IiwidXNlcl9pZCI6IjIiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJmaXJzdF9uYW1lIjoiXHUwNDIyXHUwNDM1XHUwNDQxXHUwNDQyIiwibGFzdF9uYW1lIjoiXHUwNDFmXHUwNDNlXHUwNDNiXHUwNDRjXHUwNDM3XHUwNDNlXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM1XHUwNDNiXHUwNDRjIn0.9tGFm-oUBDorjBojs8nG_VBzw_hASuaFcIIk4gu9xrQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/flights/airports/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "flights",
+            "airports",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Поиск рейса",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2ODAxNTc5LCJpYXQiOjE3NzY3MTUxNzksImp0aSI6Ijg5NjRhOWY1NzUxODRlNGRiZWIzMzg3ZmYwNGQxN2I0IiwidXNlcl9pZCI6IjIiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJmaXJzdF9uYW1lIjoiXHUwNDIyXHUwNDM1XHUwNDQxXHUwNDQyIiwibGFzdF9uYW1lIjoiXHUwNDFmXHUwNDNlXHUwNDNiXHUwNDRjXHUwNDM3XHUwNDNlXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM1XHUwNDNiXHUwNDRjIn0.9tGFm-oUBDorjBojs8nG_VBzw_hASuaFcIIk4gu9xrQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/flights/search/?departure_date=2026-05-01&destination_city=Астана&origin_city=Алматы&passengers=2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "flights",
+            "search",
+            ""
+          ],
+          "query": [
+            {
+              "key": "departure_date",
+              "value": "2026-05-01",
+              "type": "text"
+            },
+            {
+              "key": "destination_city",
+              "value": "Астана",
+              "type": "text"
+            },
+            {
+              "key": "origin_city",
+              "value": "Алматы",
+              "type": "text"
+            },
+            {
+              "key": "passengers",
+              "value": "2",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Детали рейса",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/flights/1/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "flights",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Создать бронь",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2ODA0MTgzLCJpYXQiOjE3NzY3MTc3ODMsImp0aSI6IjE5YmZjYWE3OWE1YTQ2OGE5MmJhNTljMDAzZjFiZGQzIiwidXNlcl9pZCI6IjgiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwiZmlyc3RfbmFtZSI6Ilx1MDQyMlx1MDQzNVx1MDQ0MVx1MDQ0MiIsImxhc3RfbmFtZSI6Ilx1MDQxZlx1MDQzZVx1MDQzYlx1MDQ0Y1x1MDQzN1x1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0Mlx1MDQzNVx1MDQzYlx1MDQ0YyJ9.iRSmIKVhElOxP9Ls2rPZ-R56ceL4L0h6tO5Hy3s6Hok",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"flight_id\": 1,\n    \"seats\": [\n        {\n            \"seat_id\": \"181\",\n            \"passenger_name\": \"Иван Иванов\",\n            \"passenger_email\": \"ivan@example.com\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/bookings/create/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "bookings",
+            "create",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Статистика БД",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/routes/stats/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "routes",
+            "stats",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Поиск прямых рейсов",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"origin\": \"Almaty\",\n  \"destination\": \"London\",\n  \"date\": \"2026/06/02\",\n  \"max_stops\": 1\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/routes/direct/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "routes",
+            "direct",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Поиск оптимальных маршрутов",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"origin\": \"Beijing\",\n  \"destination\": \"Frankfurt\", \n  \"date\": \"2026-06-02\",\n  \"max_stops\": 2,\n  \"prefer_price\": true\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/routes/search/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "routes",
+            "search",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Маршрут с пересадкой",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"origin\": \"Almaty\",\n  \"destination\": \"Sydney\", \n  \"date\": \"2026-06-02\",\n  \"max_stops\": 3,\n  \"prefer_price\": false\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/routes/search/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "routes",
+            "search",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
