@@ -105,7 +105,7 @@ SIMPLE_JWT = {
 }
 
 # CORS настройки
-CORS_ALLOW_ALL_ORIGINS = False  # Изменили на False
+CORS_ALLOW_ALL_ORIGINS = True  # Изменили на False
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",  # Angular dev server
     "http://127.0.0.1:4200",
